@@ -7,119 +7,143 @@
 <meta name="description" content="Himanshi Aggarwal builds assistive technology and researches green coding.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;700&amp;family=Source+Serif+4:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #F4F6F8;
-    --ink: #1B2430;
-    --muted: #55606D;
-    --rule: #CFD6DD;
-    --accent: #0F5A63;
-    --mark: #D9A21B;
-    --head: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --bg: #fde8ec;
+    --text: #000000;
+    --rule: #e3b4be;
+    --head: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
     --body: "Source Serif 4", Georgia, "Times New Roman", serif;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #141A21;
-      --ink: #E7EAEE;
-      --muted: #9BA6B2;
-      --rule: #2B343E;
-      --accent: #7CC4CC;
-      --mark: #E0A526;
-    }
-  }
   * { box-sizing: border-box; }
-  html { background: var(--bg); }
+  html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
     background: var(--bg);
-    color: var(--ink);
+    color: var(--text);
     font-family: var(--body);
     font-size: 1.125rem;
-    line-height: 1.65;
-    border-top: 6px solid var(--mark);
+    line-height: 1.7;
   }
-  main { max-width: 62rem; margin: 0 auto; padding: 4rem 1.5rem 5rem; }
-  a { color: var(--accent); text-underline-offset: 3px; }
-  a:focus-visible { outline: 3px solid var(--mark); outline-offset: 3px; }
- 
-  header { margin-bottom: 4.5rem; }
-  h1 {
+  main {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 3.5rem 1.25rem 5rem;
+  }
+  h1, h2, h3 {
     font-family: var(--head);
-    font-weight: 800;
-    font-size: clamp(2.75rem, 9vw, 5.5rem);
-    line-height: 0.95;
-    letter-spacing: -0.03em;
-    margin: 0 0 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
   }
-  .intro { max-width: 40rem; font-size: 1.3rem; line-height: 1.55; margin: 0; }
- 
-  .work { border-top: 1px solid var(--rule); padding: 2.25rem 0; display: grid; grid-template-columns: 1fr; gap: 1rem 3rem; }
-  .work:last-of-type { border-bottom: 1px solid var(--rule); }
-  .work h2 {
-    font-family: var(--head);
-    font-weight: 800;
-    font-size: 1.75rem;
-    letter-spacing: -0.01em;
-    line-height: 1.15;
-    margin: 0 0 0.75rem;
+  h1 { font-size: clamp(2.2rem, 7vw, 3.2rem); margin-bottom: 1.25rem; }
+  h2 {
+    font-size: 1.6rem;
+    margin: 3.5rem 0 1rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--rule);
   }
-  .facts { font-family: var(--head); font-weight: 500; font-size: 0.95rem; line-height: 1.5; color: var(--muted); margin: 0; }
-  .facts p { margin: 0 0 0.5rem; }
-  .text { max-width: 38rem; }
-  .text p { margin: 0 0 1rem; }
-  .text p:last-child { margin-bottom: 0; }
- 
-  @media (min-width: 52rem) {
-    .work { grid-template-columns: 16rem 1fr; }
+  h3 { font-size: 1.1rem; font-weight: 500; margin: 2rem 0 0.75rem; }
+  p { margin: 0 0 1rem; }
+  .intro { font-size: 1.25rem; }
+  .photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin: 0 0 1rem;
+  }
+  figure { margin: 0; }
+  figure img, figure video {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #f5cfd6;
+  }
+  figcaption { font-size: 0.95rem; font-style: italic; margin-top: 0.4rem; }
+  .clips { display: grid; gap: 1.25rem; margin-bottom: 1rem; }
+  .embed {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 0.4rem;
+  }
+  .embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  a { color: var(--text); text-underline-offset: 3px; }
+  a:focus-visible, iframe:focus-visible, video:focus-visible {
+    outline: 3px solid var(--text);
+    outline-offset: 3px;
+  }
+  @media (max-width: 30rem) {
+    body { font-size: 1.05rem; }
+    .photos { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 <main>
  
-<header>
-  <h1>Himanshi Aggarwal</h1>
-  <p class="intro">I build assistive technology: a voice-controlled cooking assistant for visually impaired cooks, and smart glasses that turn speech into sign language. I also study how developer tools could help programmers write greener code.</p>
-</header>
+  <header>
+    <h1>Himanshi Aggarwal</h1>
+    <p class="intro">I’m a Class 12 student in Delhi, and I build assistive technology: things that make everyday tasks a little easier for people the usual tools forget about. So far that means a cooking assistant for visually impaired cooks and smart glasses that turn speech into sign language. I’m also curious about how the tools programmers use every day could help them write code that wastes less energy.</p>
+  </header>
  
-<section class="work" aria-labelledby="drishticook">
-  <div>
+  <section aria-labelledby="drishticook">
     <h2 id="drishticook">DrishtiCook</h2>
-    <div class="facts">
-      <p>Top 10 of 600+ projects nationwide, Sustainability Youth League.</p>
-      <p>One of 5 of 119 shortlisted Delhi projects at the INSPIRE-MANAK national exhibition.</p>
+    <p>DrishtiCook is a cooking assistant for visually impaired people. You talk to it in Hindi or English, and it reads out the recipe, lets you move through the steps by voice, and dispenses ingredients when you ask for them. I’ve built two prototypes so far, and the second is quite different from the first.</p>
+    <p>It made the top 10 of more than 600 projects in the Sustainability Youth League, and it was one of 5 of 119 shortlisted Delhi projects at the INSPIRE-MANAK national exhibition.</p>
+ 
+    <h3>Prototype 1</h3>
+    <p>The first version runs on an Arduino Uno with an L298N motor driver and two Johnson motors, powered by a 12V battery or a battery eliminator. I wrote the main program in Python and the Arduino code in C.</p>
+    <div class="photos">
+      <figure>
+        <img src="media/dc1.1.jpeg" alt="DrishtiCook, first prototype" loading="lazy">
+        <figcaption>Prototype 1</figcaption>
+      </figure>
+      <figure>
+        <img src="media/dc1.2.jpeg" alt="DrishtiCook, first prototype, second photo" loading="lazy">
+        <figcaption>Prototype 1, another view</figcaption>
+      </figure>
     </div>
-  </div>
-  <div class="text">
-    <p>A cooking assistant for visually impaired users. It follows and controls a recipe by voice, in Hindi or English, and dispenses ingredients when asked. I have built two hardware prototypes.</p>
-    <p>It runs on a Raspberry Pi 5 in Python, with Piper for speech output, a USB microphone, and a stepper motor and driver that move the dispenser.</p>
-    <!-- Add a demo video link here, for example: <p><a href="YOUR-YOUTUBE-LINK">Watch the demo</a></p> -->
-  </div>
-</section>
+    <div class="embed">
+      <iframe src="https://www.youtube-nocookie.com/embed/ziR_jXtPIio" title="DrishtiCook prototype 1 demonstration" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p style="font-size:0.95rem;font-style:italic;">Prototype 1 demonstration</p>
  
-<section class="work" aria-labelledby="signsync">
-  <div>
+    <h3>Prototype 2</h3>
+    <p>For the second version I moved to a Raspberry Pi 5 with a microphone, a NEMA 17 stepper motor and a TMC2208 driver, because a stepper gives much finer control over where the dispenser stops. Piper reads the replies aloud. The rest is a switch, a breadboard, jumper wires and a battery eliminator, and the body is made of wood, paper and plastic boxes.</p>
+    <div class="photos">
+      <figure>
+        <img src="media/dc2.1.jpeg" alt="DrishtiCook, second prototype" loading="lazy">
+        <figcaption>Prototype 2</figcaption>
+      </figure>
+      <figure>
+        <img src="media/dc2.2.jpeg" alt="DrishtiCook, second prototype, second photo" loading="lazy">
+        <figcaption>Prototype 2, another view</figcaption>
+      </figure>
+    </div>
+    <div class="clips">
+      <figure>
+        <video controls playsinline preload="metadata" src="media/dc2v1.mp4">Your browser cannot play this video.</video>
+        <figcaption>The first time the stepper motor moved.</figcaption>
+      </figure>
+      <figure>
+        <video controls playsinline preload="metadata" src="media/dc2v2.mp4">Your browser cannot play this video.</video>
+        <figcaption>The ingredient tray moving on a voice command.</figcaption>
+      </figure>
+    </div>
+  </section>
+ 
+  <section aria-labelledby="signsync">
     <h2 id="signsync">SignSync</h2>
-  </div>
-  <div class="text">
-    <p>Smart glasses that convert live speech and recorded video into sign language. An infrared sensor on the glasses detects long blinks, and each blink pattern maps to a command such as “I need help” or “I need water.”</p>
-    <p>The hardware is an IR sensor, a Raspberry Pi, a microphone, a 3.2-inch touch screen and a speaker.</p>
-    <!-- Add a demo video link here -->
-  </div>
-</section>
+    <p>SignSync is a pair of smart glasses that turns live speech and recorded video into sign language. The microphone on the glasses picks up what people nearby are saying, and a small pocket-sized device that goes with them shows it as sign language on its screen. It also lets the wearer ask for things without speaking: an infrared sensor on the glasses picks up long blinks, and each blink pattern sends a message such as “I need help” or “I need water.”</p>
+    <p>The glasses carry the IR sensor and the microphone. The pocket device is a Raspberry Pi with a 3.2-inch touch screen and a speaker.</p>
+  </section>
  
-<section class="work" aria-labelledby="research">
-  <div>
+  <section aria-labelledby="research">
     <h2 id="research">Green coding research</h2>
-  </div>
-  <div class="text">
-    <p><em>Embedding Sustainability into Developer Tools: A Study on Green Coding Enablement in IDEs and Platforms.</em></p>
-    <p>Most code editors tell programmers nothing about the energy their code uses. This paper reviews 22 studies, frameworks and tools, and proposes features that would give developers live energy feedback and greener suggestions while they write.</p>
-    <!-- Add the paper link here once it is posted, for example: <p><a href="YOUR-PAPER-LINK">Read the paper</a></p> -->
-  </div>
-</section>
+    <p>Most code editors tell you nothing about how much energy your code uses, and I wanted to see whether that could change. I reviewed 22 studies, frameworks and tools, and wrote a paper about it: <em>Embedding Sustainability into Developer Tools: A Study on Green Coding Enablement in IDEs and Platforms.</em></p>
+    <p>It proposes features that would show developers live energy feedback and suggest greener alternatives while they write.</p>
+  </section>
  
 </main>
 </body>
