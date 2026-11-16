@@ -80,6 +80,7 @@
     margin-bottom: 0.4rem;
   }
   .embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .meta { font-size: 1rem; font-style: italic; }
   .embed-note { font-size: 0.95rem; font-style: italic; margin-bottom: 1.5rem; }
   a { color: var(--text); text-underline-offset: 3px; }
   a:focus-visible, iframe:focus-visible, video:focus-visible {
@@ -171,22 +172,49 @@
     </div>
   </section>
 
-  <section aria-labelledby="signsync" class="row">
-    <h2 id="signsync">SignSync</h2>
-    <div>
-      <p>SignSync is a pair of smart glasses that turns live speech and recorded video into sign language. The microphone on the glasses picks up what people nearby are saying, and a small pocket-sized device that goes with them shows it as sign language on its screen. It also lets the wearer ask for things without speaking: an infrared sensor on the glasses picks up long blinks, and each blink pattern sends a message such as “I need help” or “I need water.”</p>
-      <p>The glasses carry the IR sensor and the microphone. The pocket device is a Raspberry Pi with a 3.2-inch touch screen and a speaker.</p>
+  <section aria-labelledby="signsync">
+    <div class="row">
+      <h2 id="signsync">SignSync</h2>
+      <div>
+        <p>SignSync turns spoken words and video into sign language. Most conversations, announcements and videos are out of reach for deaf people who rely on sign language, and there are few real-time tools to translate them.</p>
+        <p>My second version moves the microphone onto a pair of smart glasses. A small pocket-sized device goes with them and shows what people nearby are saying as sign language on its screen. The wearer can also ask for things without speaking: an infrared sensor on the glasses picks up long blinks, and each blink pattern sends a message such as “I need help” or “I need water.” The pocket device is a Raspberry Pi with a 3.2-inch touch screen and a speaker.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="sticky">
+        <h3>Prototype 1</h3>
+        <p>The first prototype is a single pocket device, about 10 × 7 cm. It has a Raspberry Pi, a 3.2-inch touchscreen and a built-in microphone, and I programmed it in Python.</p>
+        <p>On the touchscreen you choose between two modes. In Live Mic Translation, the microphone picks up speech, the Python SpeechRecognition library turns it into text, and the text is matched to pre-made sign language animations that play on the screen. In Video Upload, the device pulls the spoken words out of a video and shows them as sign language animations.</p>
+      </div>
+      <div>
+        <figure>
+          <img src="media/ss1.1.jpeg" alt="SignSync, first prototype" loading="lazy">
+          <figcaption>Prototype 1</figcaption>
+        </figure>
+        <div class="embed" style="margin-top:1.5rem;">
+          <iframe src="https://www.youtube-nocookie.com/embed/QB15LYmZt-A" title="SignSync prototype 1 demonstration" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="embed-note">Prototype 1 demonstration</p>
+      </div>
     </div>
   </section>
 
   <section aria-labelledby="research" class="row">
-    <h2 id="research">Green coding research</h2>
+    <div class="sticky">
+      <h2 id="research">Green Coding: What does my code cost the planet?</h2>
+      <p class="meta">Independent research · literature review of 22 sources · paper in progress</p>
+    </div>
     <div>
-      <p>Most code editors tell you nothing about how much energy your code uses, and I wanted to see whether that could change. I reviewed 22 studies, frameworks and tools, and wrote a paper about it: <em>Embedding Sustainability into Developer Tools: A Study on Green Coding Enablement in IDEs and Platforms.</em></p>
-      <p>It proposes features that would show developers live energy feedback and suggest greener alternatives while they write.</p>
+      <p>When I write code, my editor tells me about every typo and every error. But it never tells me how much electricity my program uses. Every program I run, on a laptop, a Raspberry Pi or a cloud server, uses energy somewhere, and where that electricity comes from matters. I realised I had no idea what my own code costs, and that made me curious about whether anyone had tried to solve this.</p>
+      <p>So I read and compared 22 research papers, reports and tools on green coding and developer tools. I asked one question: do the tools developers use every day help them write energy-efficient code? From what I read, most tools measure energy only after the code has already run, very few work inside the editor, and few tell you how to fix wasteful code.</p>
+      <p>I argue that this feedback should appear while you write, the way spellcheck does. My paper proposes four features: a live estimate of energy and carbon, warnings for wasteful patterns such as unnecessary loops, suggestions for greener alternatives, and sustainability checks during team code reviews.</p>
+      <p>I build assistive technology that people use in real homes, so I care about technology that is helpful and responsible. Green coding connects both ideas for me.</p>
+      <p><strong>What’s next:</strong> I’m planning to build a small tool that estimates the energy use of Python code and suggests a greener alternative, then test it on my own projects, DrishtiCook and SignSync.</p>
     </div>
   </section>
 
 </main>
 </body>
 </html>
+
