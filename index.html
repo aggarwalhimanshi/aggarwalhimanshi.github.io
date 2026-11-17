@@ -80,6 +80,7 @@
     margin-bottom: 0.4rem;
   }
   .embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .wide { grid-column: 1 / -1; }
   .meta { font-size: 1rem; font-style: italic; }
   .embed-note { font-size: 0.95rem; font-style: italic; margin-bottom: 1.5rem; }
   a { color: var(--text); text-underline-offset: 3px; }
@@ -158,6 +159,16 @@
           <iframe src="https://www.youtube-nocookie.com/embed/NU8lmY8AY3w" title="DrishtiCook prototype 2 demonstration" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <p class="embed-note">Prototype 2 demonstration</p>
+        <div class="photos">
+          <figure>
+            <img src="media/dct1.jpeg" alt="Testing DrishtiCook prototype 2 with a visually impaired user" loading="lazy">
+            <figcaption>Testing Prototype 2 with a visually impaired user at the All India Confederation of the Blind, Delhi</figcaption>
+          </figure>
+          <figure>
+            <img src="media/dct2.jpeg" alt="Testing DrishtiCook prototype 2 with a visually impaired user, second photo" loading="lazy">
+            <figcaption>Testing Prototype 2, another view</figcaption>
+          </figure>
+        </div>
         <div class="clips">
           <figure>
             <video controls playsinline preload="metadata" src="media/dc2v1.mp4">Your browser cannot play this video.</video>
@@ -170,32 +181,107 @@
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="sticky">
+        <h3>Presenting DrishtiCook</h3>
+        <p>I presented DrishtiCook at the INSPIRE state round in Delhi, then represented Delhi at the INSPIRE-MANAK national exhibition. I also explained it to mentors at an IIT Delhi mentorship workshop.</p>
+      </div>
+      <div>
+        <div class="photos">
+          <figure>
+            <img src="media/dc1.3.jpeg" alt="Presenting DrishtiCook at the INSPIRE state event in Delhi" loading="lazy">
+            <figcaption>Presenting DrishtiCook at the INSPIRE state round, Delhi</figcaption>
+          </figure>
+          <figure>
+            <img src="media/dc1.4.jpeg" alt="Explaining DrishtiCook to mentors at the IIT Delhi mentorship workshop" loading="lazy">
+            <figcaption>Explaining DrishtiCook to mentors at the IIT Delhi mentorship workshop</figcaption>
+          </figure>
+          <figure>
+            <img src="media/dc2.3.jpeg" alt="Representing Delhi at the INSPIRE-MANAK national exhibition" loading="lazy">
+            <figcaption>Representing Delhi at the INSPIRE-MANAK national exhibition</figcaption>
+          </figure>
+          <figure>
+            <img src="media/dc2.4.jpeg" alt="Presenting DrishtiCook to the judges at the INSPIRE-MANAK national exhibition" loading="lazy">
+            <figcaption>Presenting DrishtiCook to the judges at the national exhibition</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section aria-labelledby="signsync">
     <div class="row">
       <h2 id="signsync">SignSync</h2>
       <div>
-        <p>SignSync turns spoken words and video into sign language. Most conversations, announcements and videos are out of reach for deaf people who rely on sign language, and there are few real-time tools to translate them.</p>
-        <p>My second version moves the microphone onto a pair of smart glasses. A small pocket-sized device goes with them and shows what people nearby are saying as sign language on its screen. The wearer can also ask for things without speaking: an infrared sensor on the glasses picks up long blinks, and each blink pattern sends a message such as “I need help” or “I need water.” The pocket device is a Raspberry Pi with a 3.2-inch touch screen and a speaker.</p>
+        <p>SignSync turns spoken words and video into sign language, and turns eye blinks into spoken words. More than 63 million people in India are hearing impaired, and millions of paralysed patients worldwide have no affordable, real-time, hands-free way to communicate. Existing solutions are usually expensive, slow or incomplete.</p>
+        <p>SignSync is a team project. Our team, Soul Sync, is Fagun Bhutani and me. Fagun worked on the coding and AI integration, I worked on the hardware, design and presentation, and we planned the business side together.</p>
+        <p class="awards">Best Prototype Award, Bharat Innovation Challenge 2025.</p>
       </div>
     </div>
 
     <div class="row">
       <div class="sticky">
         <h3>Prototype 1</h3>
-        <p>The first prototype is a single pocket device, about 10 × 7 cm. It has a Raspberry Pi, a 3.2-inch touchscreen and a built-in microphone, and I programmed it in Python.</p>
+        <p>The first prototype is a single pocket device, about 10 × 7 cm. It has a Raspberry Pi, a 3.2-inch touchscreen and a built-in microphone, and it is programmed in Python.</p>
         <p>On the touchscreen you choose between two modes. In Live Mic Translation, the microphone picks up speech, the Python SpeechRecognition library turns it into text, and the text is matched to pre-made sign language animations that play on the screen. In Video Upload, the device pulls the spoken words out of a video and shows them as sign language animations.</p>
       </div>
       <div>
-        <figure>
-          <img src="media/ss1.1.jpeg" alt="SignSync, first prototype" loading="lazy">
-          <figcaption>Prototype 1</figcaption>
-        </figure>
-        <div class="embed" style="margin-top:1.5rem;">
+        <div class="photos">
+          <figure>
+            <img src="media/ss1.1.jpeg" alt="SignSync, first prototype" loading="lazy">
+            <figcaption>Prototype 1</figcaption>
+          </figure>
+          <figure>
+            <img src="media/ss1.2.jpeg" alt="SignSync prototype 1 being tested with a hearing-impaired student" loading="lazy">
+            <figcaption>Testing Prototype 1 with a hearing-impaired student</figcaption>
+          </figure>
+        </div>
+        <div class="embed">
           <iframe src="https://www.youtube-nocookie.com/embed/QB15LYmZt-A" title="SignSync prototype 1 demonstration" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <p class="embed-note">Prototype 1 demonstration</p>
+        <div class="photos">
+          <figure>
+            <img src="media/ss1.3.jpeg" alt="Presenting SignSync prototype 1 at the 1M1B, CBSE and IBM Skills to Careers event" loading="lazy">
+            <figcaption>Presenting Prototype 1 at the 1M1B × CBSE × IBM Skills to Careers event</figcaption>
+          </figure>
+          <figure>
+            <img src="media/ss1.4.jpeg" alt="Presenting SignSync prototype 1 at the 1M1B and IBM Future Tech Influencers Roundtable" loading="lazy">
+            <figcaption>Presenting Prototype 1 at the 1M1B × IBM Future Tech Influencers Roundtable</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="sticky">
+        <h3>Prototype 2</h3>
+        <p>The second prototype adds a mode for people who cannot speak or move. An infrared sensor on the glasses picks up eye blinks, each blink pattern is matched to a preset phrase such as “I need help” or “I need water,” and the device says it out loud through text-to-speech. The speech-to-sign mode from the first prototype stays.</p>
+        <p>In this version the microphone moved onto a pair of smart glasses, and a small pocket-sized device goes with them. It is a Raspberry Pi 4 with a 3.2-inch touch screen and a speaker, and it shows the sign language for what people nearby are saying. The software is written in Python, with a Flask app, speech-to-text and text-to-speech models, and a public sign language dataset. We estimate that it could be built for about ₹7,500 a unit.</p>
+      </div>
+      <div>
+        <div class="photos">
+          <figure class="wide">
+            <img src="media/ss2.1.jpeg" alt="SignSync, second prototype" loading="lazy">
+            <figcaption>Prototype 2</figcaption>
+          </figure>
+          <figure>
+            <img src="media/ss2.2.jpeg" alt="Showing SignSync prototype 2 at a government school for deaf students" loading="lazy">
+            <figcaption>Showing Prototype 2 at a government school for deaf students</figcaption>
+          </figure>
+          <figure>
+            <img src="media/ss2.3.jpeg" alt="Showing SignSync prototype 2 at the Directorate of Education office" loading="lazy">
+            <figcaption>Showing Prototype 2 at the Directorate of Education office</figcaption>
+          </figure>
+          <figure>
+            <img src="media/ss2.4.jpeg" alt="Presenting SignSync prototype 2 at the Bharat Innovation Challenge 2025" loading="lazy">
+            <figcaption>At the Bharat Innovation Challenge 2025, where SignSync won the Best Prototype Award</figcaption>
+          </figure>
+          <figure>
+            <img src="media/ss2.5.jpeg" alt="SignSync prototype 2 at the Bharat Innovation Challenge 2025" loading="lazy">
+            <figcaption>Prototype 2 at the Bharat Innovation Challenge 2025</figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </section>
@@ -217,4 +303,3 @@
 </main>
 </body>
 </html>
-
